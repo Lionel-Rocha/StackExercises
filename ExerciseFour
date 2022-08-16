@@ -1,0 +1,34 @@
+string = "this apple"
+
+array = list(string)
+
+x = []
+y = []
+
+isEqual = True
+
+print("Insert character for removal: ")
+a = input()
+
+for i in range(array.__len__()):
+    x.append(array[i])
+
+print(x)
+
+
+def isEmpty(x):
+    if x.__len__() == 0:
+        return True
+    else:
+        return False
+
+
+while not isEmpty(x):
+    b = x.pop()
+    if b != a:
+        y.append(b)
+
+for i in range(y.__len__()):
+    x.append(y.pop())
+
+print(x)
