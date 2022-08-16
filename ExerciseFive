@@ -1,0 +1,39 @@
+string = "this apple is rotten"
+
+array = list(string)
+
+x = []
+y = []
+
+
+def isEmpty(x):
+    if x.__len__() == 0:
+        return True
+    else:
+        return False
+
+
+def top(x):
+    char = x.pop()
+    x.append(char)
+    return char
+
+
+for i in range(array.__len__()):
+    x.append(array[i])
+
+print(x)
+word = ""
+
+while not isEmpty(x):
+    character = top(x)
+    if character != ' ':
+        word = word+character
+    else:
+        y.append(word)
+        word = ""
+    x.pop()
+
+y.append(word)
+
+print(y)
