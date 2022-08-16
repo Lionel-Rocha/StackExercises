@@ -1,0 +1,43 @@
+string = "ABABBADABBABA"
+
+array = list(string)
+
+x = []
+y = []
+isEqual = True
+
+for i in range(array.__len__()):
+    x.append(array[i])
+
+length = x.__len__()
+
+
+for i in range(length):
+    a = x.pop()
+    if a != 'C':
+        y.append(a)
+    else:
+        break
+
+
+def isEmpty(x):
+    if x.__len__() == 0:
+        return True
+    else:
+        return False
+
+
+if isEmpty(x):
+    print("Array is not in desired way.")
+    isEqual = False
+else:
+    while not isEmpty(x):
+        a = x.pop()
+        b = y.pop()
+        if a != b:
+            print("Array is not in desired way. X is different than Y.")
+            isEqual = False
+            break
+
+print(isEqual)
+
