@@ -1,0 +1,64 @@
+string = "ABABBACABBABADABAAAACABBABA"
+
+array = list(string)
+
+x = []
+y = []
+f = []
+g = []
+
+isEqual = True
+
+for i in range(array.__len__()):
+    x.append(array[i])
+
+length = x.__len__()
+
+for i in range(length):
+    a = x.pop()
+    if a != 'D':
+        y.append(a)
+    else:
+        break
+
+for i in range(y.__len__()):
+    a = y.pop()
+    if a != 'C':
+        g.append(a)
+    else:
+        break
+
+for i in range(x.__len__()):
+    a = x.pop()
+    if a != 'C':
+        f.append(a)
+    else:
+        break
+
+
+def isEmpty(x):
+    if x.__len__() == 0:
+        return True
+    else:
+        return False
+
+
+print(x)
+print(y)
+print(f)
+print(g)
+
+if isEmpty(x) or isEmpty(y) or isEmpty(f) or isEmpty(g):
+    isEqual = False
+else:
+    while isEmpty(x) or isEmpty(y) or isEmpty(f) or isEmpty(g) == False:
+        a = x.pop()
+        b = y.pop()
+        c = f.pop()
+        d = g.pop()
+        if a != b or c != d:
+            print("Array is not in desired way")
+            isEqual = False
+            break
+
+print(isEqual)
