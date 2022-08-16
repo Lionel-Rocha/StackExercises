@@ -1,0 +1,30 @@
+string = "this apple"
+string2 = "is delicious"
+
+array = list(string)
+array2 = list(string2)
+
+x = []
+y = []
+
+isEqual = True
+
+for i in range(array.__len__()):
+    x.append(array[i])
+
+for i in range(array2.__len__()):
+    y.append(array2[i])
+
+length = array.__len__() + array2.__len__()
+
+array3 = []
+
+for i in range(x.__len__()):
+    array3.append(x.pop())
+
+a = x.__len__()
+
+for a in range(a + y.__len__()):
+    array3.append(y.pop())
+
+print(array3)
